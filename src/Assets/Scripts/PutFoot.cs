@@ -48,7 +48,5 @@ public class PutFoot : MonoBehaviour
         {
             RightFoot.transform.position = FootPosition.transform.position;
         }
-
-        SwitchFoot();
     }
 }
