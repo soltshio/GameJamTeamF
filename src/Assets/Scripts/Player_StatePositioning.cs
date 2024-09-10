@@ -9,15 +9,12 @@ public partial class Player
     {
         public override void OnEnter(Player owner, PlayerStateBase prevState)
         {
-            owner.moveTime.ResetMoveTime();
-            owner.putFoot.SwitchFoot();//足を入れ替える
+            owner.move.MoveReset();//リセット処理
         }
 
         public override void OnUpdate(Player owner)
         {
-            owner.move.MoveControl();
-
-            if(!owner.moveTime.CanMove())//動けなくなったら位置決めの後に遷移
+            if(!owner.move.MoveControl())//動けなくなったら位置決めの後に遷移(そうでない場合は自由に動かせる)
             {
                 owner.ChangeState(stateAfterPositioning);
             }
