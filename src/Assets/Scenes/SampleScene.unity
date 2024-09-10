@@ -845,8 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d42e5bcc7a02f4292239f0a46a2d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  moveTime: 3
+  speed: 10
+  moveTime: 1
   firstPos: {fileID: 981699102}
 --- !u!1 &1282421793
 GameObject:
