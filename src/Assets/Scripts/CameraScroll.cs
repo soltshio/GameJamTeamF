@@ -38,15 +38,6 @@ public class CameraScroll : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Foot"))
-        {
-            scrollNow = true;
-            Debug.Log("êGÇÍÇƒÇ‹Ç∑");
-        }
-    }
-
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Foot"))
