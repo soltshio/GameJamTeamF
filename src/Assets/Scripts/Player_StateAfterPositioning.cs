@@ -11,6 +11,7 @@ public partial class Player
         {
             owner.putFoot.Put();//足を置く
             //現在の足の当たり判定を見る(当たってたらゲームオーバー)
+            owner.cameraScroll.ScrollTrigger();//trueにする
         }
 
         public override void OnUpdate(Player owner)
@@ -18,7 +19,7 @@ public partial class Player
             //画面スクロール
             owner.cameraScroll.Scroll();
 
-            if(!owner.cameraScroll.ScrollNow)//スクロールしなくなったら位置決めに遷移
+            if (!owner.cameraScroll.ScrollNow)//スクロールしなくなったら位置決めに遷移
             {
                 owner.ChangeState(statePositioning);
             }
