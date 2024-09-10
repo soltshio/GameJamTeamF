@@ -5,9 +5,9 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] float speed;//動く速さ
-    //[SerializeField] GameObject left;//左足
-    //[SerializeField] GameObject right;//右足
-    //bool moveLeftNow = true;//今左足を動かしているか、最初に動かすのは左足
+    [SerializeField] float moveTime;//動かせる時間
+    [SerializeField] Transform firstPos;//位置決めの足の初期位置
+    private float currentMoveTime = 0;//現在の動かせる時間
 
     void Start()
     {
@@ -20,26 +20,26 @@ public class Move : MonoBehaviour
         
     }
 
-    //public void SwitchMoveFoot()//動かす足を入れ替える
-    //{
-    //    moveLeftNow=!moveLeftNow;//動かす足を反転
-    //}
-
-    public void MoveControl()
+    public void MoveReset()
     {
-        Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        currentMoveTime = 0;
+        transform.position = firstPos.position;
+    }
 
-        //if (moveLeftNow)//左足を動かしている
-        //{
-        //    left.transform.Translate(move * speed * Time.deltaTime);
-        //}
-        //else//右足を動かしている
-        //{
-        //    right.transform.Translate(move * speed * Time.deltaTime);
-        //}
+    public bool MoveControl()
+    {
+        //動かす時間の管理
+        currentMoveTime += Time.deltaTime;
 
-        transform.Translate(move * speed * Time.deltaTime);
-
-
+        //動かす処理
+        if (currentMoveTime <= moveTime)//動かせるならtrueを返す
+        {
+            Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            transform.Translate(move * speed * Time.deltaTime);
+            return true;
+        }
+            
+        //動かせなくなったらfalseを返す
+        return false;
     }
 }
