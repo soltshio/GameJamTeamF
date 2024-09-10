@@ -6,7 +6,9 @@ public class Move : MonoBehaviour
 {
     [SerializeField] float speed;//動く速さ
     [SerializeField] float moveTime;//動かせる時間
-    [SerializeField] Transform firstPos;//位置決めの足の初期位置
+    [SerializeField] Transform firstLeftPos;//位置決めの左足の初期位置
+    [SerializeField] Transform firstRightPos;//位置決めの右足の初期位置
+    [SerializeField] CurrentFoot currentFoot;//現在の足
     private float currentMoveTime = 0;//現在の動かせる時間
 
     void Start()
@@ -23,7 +25,16 @@ public class Move : MonoBehaviour
     public void MoveReset()
     {
         currentMoveTime = 0;
-        transform.position = firstPos.position;
+        if(currentFoot.CurrentMovingFoot())//左足の時
+        {
+            transform.position = firstLeftPos.position;
+        }
+        else//右足の時
+        {
+            transform.position = firstRightPos.position;
+        }
+        
+
     }
 
     public bool MoveControl()
