@@ -24,6 +24,11 @@ public class CameraScroll : MonoBehaviour
         
     }
 
+    public void ScrollTrigger()//スクロール時に呼ぶ(これを状態開始時に呼ばないとスクロールされない)
+    {
+        scrollNow = true;
+    }
+
     public void Scroll()//スクロールしてる間はtrue、してない間はfalseを返す
     {
         if (scrollNow)
