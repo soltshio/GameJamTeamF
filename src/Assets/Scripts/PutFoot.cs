@@ -9,9 +9,8 @@ public class PutFoot : MonoBehaviour
     [SerializeField] GameObject LeftFoot;
     [SerializeField] GameObject RightFoot;
     [SerializeField] GameObject FootPosition;
-
-    bool Left = true;
-
+    [SerializeField] CurrentFoot currentFoot;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,27 +23,14 @@ public class PutFoot : MonoBehaviour
         
     }
 
-    //置く足を切り替える
-    public void SwitchFoot()
-    {
-        if (Left)
-        {
-            Left = false; //右足に切り替える
-        }
-        else
-        {
-            Left = true; //左足に切り替える
-        }
-    }
-
     //足を置く(左、右分けて)
     public void Put()
     {
-        if (Left)
+        if (currentFoot.CurrentMovingFoot())//左足を置く
         {
             LeftFoot.transform.position = FootPosition.transform.position;
         }
-        else
+        else//右足を置く
         {
             RightFoot.transform.position = FootPosition.transform.position;
         }
