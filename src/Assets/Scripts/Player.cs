@@ -9,6 +9,7 @@ public partial class Player : MonoBehaviour
     [SerializeField] CurrentFoot currentFoot;
     [SerializeField] CameraScroll cameraScroll;
     [SerializeField] LimitRange limitRange;
+    [SerializeField] DisplayFoot displayFoot;
 
     void Start()
     {

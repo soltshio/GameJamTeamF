@@ -10,6 +10,7 @@ public partial class Player
         public override void OnEnter(Player owner, PlayerStateBase prevState)
         {
             owner.move.MoveReset();//ƒŠƒZƒbƒgˆ—
+            
         }
 
         public override void OnUpdate(Player owner)
