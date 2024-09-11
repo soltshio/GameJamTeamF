@@ -10,7 +10,6 @@ public partial class Player
         public override void OnEnter(Player owner, PlayerStateBase prevState)
         {
             owner.putFoot.Put();//足を置く
-            //現在の足の当たり判定を見る(当たってたらゲームオーバー)
             owner.cameraScroll.ScrollTrigger();//trueにする
         }
 
@@ -28,6 +27,7 @@ public partial class Player
         public override void OnExit(Player owner, PlayerStateBase nextState)
         {
             owner.currentFoot.SwitchFoot();//現在動かしている足を入れ替える
+            owner.displayFoot.Display();
         }
     }
 }
