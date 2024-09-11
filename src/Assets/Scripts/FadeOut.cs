@@ -57,7 +57,7 @@ public class FadeOut : MonoBehaviour
         {
             if (StartGame) //ゲームを始める
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("Lv1Scene");
             }
             else if (BackMenu) //スタート画面に戻る
             {
