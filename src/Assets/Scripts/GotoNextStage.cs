@@ -22,7 +22,7 @@ public class GotoNextStage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("ObstacleFoot"))//足が入ったら次のシーンに
+        if(collision.CompareTag("LeftFoot")|| collision.CompareTag("RightFoot"))//足が入ったら次のシーンに
         {
             change = true;
         }
