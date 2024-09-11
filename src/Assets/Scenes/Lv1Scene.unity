@@ -3842,7 +3842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  moveTime: 1.9
+  moveTime: 3
   widthFirstPos: 5
   cameraPos: {fileID: 519420032}
   leftShoes: {fileID: 917407871}
@@ -4878,7 +4878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1724674980
 MonoBehaviour:
   m_ObjectHideFlags: 0
