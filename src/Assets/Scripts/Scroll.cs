@@ -6,6 +6,12 @@ public class Scroll : MonoBehaviour
 {
     [SerializeField] float ScrollSpeed = 10;
     bool OnScroll;
+    
+
+    void Start()
+    {
+        
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -13,7 +19,7 @@ public class Scroll : MonoBehaviour
         {
             OnScroll = true;
         }
-        else
+        else 
         {
             OnScroll = false;
         }
