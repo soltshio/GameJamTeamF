@@ -5,12 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
+    CurrentFoot currentFoot;
+
+    void Start()
+    {
+        currentFoot = GameObject.FindWithTag("FootManager").GetComponent<CurrentFoot>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("ObstacleFoot"))
+        //“®‚©‚µ‚Ä‚¢‚é•û‚ÌŒC‚ªáŠQ•¨‚ÉG‚ê‚½‚çƒQ[ƒ€ƒI[ƒo[
+        if (currentFoot.CurrentMovingFoot()&& collision.CompareTag("LeftFoot"))//¶‘«
         {
-            //ŒC‚ªáŠQ•¨‚ÉG‚ê‚½‚çƒQ[ƒ€ƒI[ƒo[
             SceneManager.LoadScene("GameOverScene");
         }
+        else if(!currentFoot.CurrentMovingFoot() && collision.CompareTag("RightFoot"))//‰E‘«
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+        
     }
 }

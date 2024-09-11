@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 61115869}
   m_Layer: 0
   m_Name: ObstacleCollider
-  m_TagString: ObstacleFoot
+  m_TagString: LeftFoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2252,7 +2252,7 @@ GameObject:
   - component: {fileID: 844356444}
   m_Layer: 0
   m_Name: FootManager
-  m_TagString: Untagged
+  m_TagString: FootManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2313,7 +2313,7 @@ GameObject:
   - component: {fileID: 847727647}
   m_Layer: 0
   m_Name: ObstacleCollider
-  m_TagString: ObstacleFoot
+  m_TagString: RightFoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4878,7 +4878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1724674980
 MonoBehaviour:
   m_ObjectHideFlags: 0
