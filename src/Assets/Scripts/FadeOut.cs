@@ -29,6 +29,7 @@ public class FadeOut : MonoBehaviour
         }
     }
 
+    //スタートボタン　リトライボタンを押した時
     public void PushStartButton()
     {
         if (!BackMenu)
@@ -37,6 +38,7 @@ public class FadeOut : MonoBehaviour
         }
     }
 
+    //メニューボタンを押したとき
     public void PushMenuButton()
     {
         if (!StartGame)
@@ -53,11 +55,11 @@ public class FadeOut : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            if (StartGame)
+            if (StartGame) //ゲームを始める
             {
                 SceneManager.LoadScene("SampleScene");
             }
-            else if (BackMenu)
+            else if (BackMenu) //スタート画面に戻る
             {
                 SceneManager.LoadScene("StartScene");
             }
