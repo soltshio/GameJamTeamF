@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FadeOut : MonoBehaviour
 {
-    [SerializeField] float fadeDuration;
-    [SerializeField] float displayImageDuration;
+    [SerializeField] float fadeDuration;//‰½•bŠ®‘S‚ÉˆÃ“]
+    [SerializeField] float displayImageDuration;//Š®‘S‚ÉˆÃ“]‚µ‚Ä‚©‚ç‰½•b‚ÅƒV[ƒ“‚ğ‘JˆÚ‚·‚é‚©
     [SerializeField] CanvasGroup canvasGroup;
 
     bool StartGame = false;
