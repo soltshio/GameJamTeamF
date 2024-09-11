@@ -1610,8 +1610,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   moveTime: 5
-  firstLeftPos: {fileID: 981699102}
-  firstRightPos: {fileID: 183265209}
+  widthFirstPos: 5
+  cameraPos: {fileID: 519420032}
+  leftShoes: {fileID: 917407871}
+  rightShoes: {fileID: 1095975900}
   currentFoot: {fileID: 844356444}
 --- !u!114 &1239010355
 MonoBehaviour:
