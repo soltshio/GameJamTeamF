@@ -14,6 +14,8 @@ public partial class Player
 
         public override void OnUpdate(Player owner)
         {
+            owner.limitRange.Limit();
+
             if(!owner.move.MoveControl())//“®‚¯‚È‚­‚È‚Á‚½‚çˆÊ’uŒˆ‚ß‚ÌŒã‚É‘JˆÚ(‚»‚¤‚Å‚È‚¢ê‡‚Í©—R‚É“®‚©‚¹‚é)
             {
                 owner.ChangeState(stateAfterPositioning);

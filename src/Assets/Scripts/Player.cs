@@ -8,6 +8,7 @@ public partial class Player : MonoBehaviour
     [SerializeField] PutFoot putFoot;
     [SerializeField] CurrentFoot currentFoot;
     [SerializeField] CameraScroll cameraScroll;
+    [SerializeField] LimitRange limitRange;
 
     void Start()
     {
