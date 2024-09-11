@@ -31,7 +31,9 @@ public class CameraScroll : MonoBehaviour
 
     public void Scroll()//スクロールしてる間はtrue、してない間はfalseを返す
     {
-        if (scrollNow&&!toGameOver)
+        if (toGameOver.Gameover) return;
+
+        if (scrollNow)
         {
             Vector2 move= Vector2.up;
             transform.Translate(move*scrollSpeed*Time.deltaTime);
