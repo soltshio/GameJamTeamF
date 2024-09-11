@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class Obstacle : MonoBehaviour
 {
     CurrentFoot currentFoot;
+    ToGameOver toGameOver;
 
     void Start()
     {
         currentFoot = GameObject.FindWithTag("FootManager").GetComponent<CurrentFoot>();
+        toGameOver=GameObject.FindWithTag("PlayerManager").GetComponent<ToGameOver>();  
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -17,11 +19,11 @@ public class Obstacle : MonoBehaviour
         //“®‚©‚µ‚Ä‚¢‚é•û‚ÌŒC‚ªáŠQ•¨‚ÉG‚ê‚½‚çƒQ[ƒ€ƒI[ƒo[
         if (currentFoot.CurrentMovingFoot()&& collision.CompareTag("LeftFoot"))//¶‘«
         {
-            SceneManager.LoadScene("GameOverScene");
+            toGameOver.GameoverTrigger();
         }
         else if(!currentFoot.CurrentMovingFoot() && collision.CompareTag("RightFoot"))//‰E‘«
         {
-            SceneManager.LoadScene("GameOverScene");
+            toGameOver.GameoverTrigger();
         }
         
     }

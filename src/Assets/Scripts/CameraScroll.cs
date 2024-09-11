@@ -6,7 +6,7 @@ public class CameraScroll : MonoBehaviour
 {
     [SerializeField] float scrollSpeed;//スクロールの速さ
     bool scrollNow=false;//現在スクロールしているか、足がカメラに触れている時はスクロールする
-
+    ToGameOver toGameOver;
     public bool ScrollNow
     {
         get { return scrollNow; }
@@ -15,7 +15,7 @@ public class CameraScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        toGameOver = GameObject.FindWithTag("PlayerManager").GetComponent<ToGameOver>();
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class CameraScroll : MonoBehaviour
 
     public void Scroll()//スクロールしてる間はtrue、してない間はfalseを返す
     {
-        if (scrollNow)
+        if (scrollNow&&!toGameOver)
         {
             Vector2 move= Vector2.up;
             transform.Translate(move*scrollSpeed*Time.deltaTime);
