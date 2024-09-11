@@ -23,18 +23,26 @@ public class FadeOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (StartGame || BackMenu)
+        {
+            Fadeout();
+        }
     }
 
     public void PushStartButton()
     {
-        StartGame = true;
+        if (!BackMenu)
+        {
+            StartGame = true;
+        }
     }
 
     public void PushMenuButton()
     {
-        BackMenu = true;
-        Fadeout();
+        if (!StartGame)
+        {
+            BackMenu = true;
+        }
     }
 
     void Fadeout()
@@ -47,7 +55,7 @@ public class FadeOut : MonoBehaviour
         {
             if (StartGame)
             {
-                //SceneManager.LoadScene("");
+                SceneManager.LoadScene("SampleScene");
             }
             else if (BackMenu)
             {
