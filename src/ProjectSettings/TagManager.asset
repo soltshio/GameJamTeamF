@@ -11,6 +11,7 @@ TagManager:
   - RightFoot
   - FootManager
   - EndPoint
+  - PlayerManager
   layers:
   - Default
   - TransparentFX
