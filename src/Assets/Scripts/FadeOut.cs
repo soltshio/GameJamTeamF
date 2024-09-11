@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FadeOut : MonoBehaviour
 {
-    [SerializeField] float fadeDuration;
-    [SerializeField] float displayImageDuration;
+    [SerializeField] float fadeDuration;//何秒完全に暗転
+    [SerializeField] float displayImageDuration;//完全に暗転してから何秒でシーンを遷移するか
     [SerializeField] CanvasGroup canvasGroup;
 
     bool StartGame = false;
@@ -57,7 +57,7 @@ public class FadeOut : MonoBehaviour
         {
             if (StartGame) //ゲームを始める
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("Lv1Scene");
             }
             else if (BackMenu) //スタート画面に戻る
             {
