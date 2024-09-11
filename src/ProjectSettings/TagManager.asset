@@ -7,6 +7,9 @@ TagManager:
   - Foot
   - ScrollFoot
   - ObstacleFoot
+  - LeftFoot
+  - RightFoot
+  - FootManager
   layers:
   - Default
   - TransparentFX
