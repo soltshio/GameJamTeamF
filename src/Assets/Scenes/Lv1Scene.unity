@@ -13858,7 +13858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  moveTime: 5
+  moveTime: 1
   widthFirstPos: 5
   cameraPos: {fileID: 519420032}
   leftShoes: {fileID: 917407871}
